@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Planeje & Execute</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="home">
+  <h1>Planeje & Execute</h1>
+  <p>(primeiro cadastrar e depois entrar)</p>
+  <button onclick="showLogin()">Entrar</button>
+  <button onclick="showRegister()">Cadastrar</button>
+</div>
+
+<div id="login" class="hidden">
+  <input id="loginEmail" placeholder="E-mail">
+  <input id="loginSenha" type="password" placeholder="Senha">
+  <button onclick="login()">Entrar</button>
+</div>
+
+<div id="register" class="hidden">
+  <input id="regEmail" placeholder="E-mail">
+  <input id="regSenha" type="password" placeholder="Senha">
+  <button onclick="register()">Cadastrar</button>
+</div>
+
+<div id="app" class="hidden">
+  <h1>Suas tarefas</h1>
+
+  <div class="board">
+    <div class="column">
+      <h2>Ideias</h2>
+      <div id="todo" class="tasks"></div>
+      <button onclick="addTask('todo')">+</button>
+    </div>
+
+    <div class="column">
+      <h2>Planejamento</h2>
+      <div id="doing" class="tasks"></div>
+      <button onclick="addTask('doing')">+</button>
+    </div>
+
+    <div class="column">
+      <h2>Executar</h2>
+      <div id="progress" class="tasks"></div>
+      <button onclick="addTask('progress')">+</button>
+    </div>
+
+    <div class="column">
+      <h2>Concluído</h2>
+      <div id="done" class="tasks"></div>
+      <button onclick="addTask('done')">+</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
